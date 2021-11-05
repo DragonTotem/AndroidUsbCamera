@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_black"
+    android:paddingBottom="10dp"
+    tools:ignore="MergeRootFrame">
+
+    <LinearLayout
+        android:id="@+id/views"
+        android:layout_width="match_parent"
+        android:layout_height="530dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:paddingBottom="1dp">
+
+        <ImageView
+            android:id="@+id/view_light"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:clickable="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/light_selector"></ImageView>
+
+        <ImageView
+            android:id="@+id/view_tep"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/tep_close"></ImageView>
+
+        <ImageView
+            android:id="@+id/view_weather"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_below="@id/view_tep"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/wether_close"></ImageView>
+
+        <ImageView
+            android:id="@+id/view_water"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_below="@id/view_weather"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/wa_close"></ImageView>
+
+        <ImageView
+            android:id="@+id/view_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/view_water"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/bottom"></ImageView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/views"
+        android:layout_alignParentTop="true"
+        android:background="@color/TRANSPARENT">
+
+        <ImageView
+            android:id="@+id/view_top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitStart"
+            android:src="@mipmap/light_top"></ImageView>
+
+        <TextClock
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="45dp"
+            android:format12Hour="hh:mm:ss"
+            android:format24Hour="HH:mm:ss"
+            android:textColor="@color/WHITE"
+            android:textSize="40sp"
+            android:textStyle="normal" />
+
+        <TextClock
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_time"
+            android:layout_marginLeft="30dp"
+            android:format12Hour="2021年MM月dd日 EEEE"
+            android:format24Hour="2021年MM月dd日 EEEE"
+            android:textColor="@color/WHITE"
+            android:textSize="15sp"
+            android:textStyle="normal" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/TRANSPARENT"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:visibility="visible">
+
+        <View
+            android:id="@+id/settings_btn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/settings" />
+
+        <View
+            android:id="@+id/exit_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:background="@color/TRANSPARENT" />
+
+        <View
+            android:id="@+id/audio_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="80dp"
+            android:background="@mipmap/scamera" />
+
+        <View
+            android:id="@+id/scamera_btn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="40dp"
+            android:background="@mipmap/scamera" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:text="常规摄像头"
+            android:textAlignment="textEnd" />
+
+        <Button
+            android:id="@+id/btn_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:text="USB摄像头"
+            android:textAlignment="textEnd" />
+
+        <Button
+            android:id="@+id/btn_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:text="音频测试间"
+            android:textAlignment="textEnd" />
+
+        <Button
+            android:id="@+id/btn_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:text="直播间"
+            android:textAlignment="textEnd" />
+
+        <Button
+            android:id="@+id/btn_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:text="usb直播间"
+            android:textAlignment="textEnd" />
+
+        <Button
+            android:id="@+id/btn_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:text="预留间"
+            android:textAlignment="textEnd" />
+
+    </LinearLayout>
+
+</RelativeLayout>

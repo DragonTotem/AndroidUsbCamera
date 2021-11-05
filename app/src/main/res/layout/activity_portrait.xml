@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <com.laifeng.sopcastsdk.ui.CameraLivingView
+        android:id="@+id/liveView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.jiangdg.usbcamera.ui.TopRightWeightedLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="#4d000000"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <com.jiangdg.usbcamera.ui.MultiToggleImageButton
+            android:id="@+id/record_mic_button"
+            style="@style/NiceOption"
+            app:imageIds="@array/record_mic_icons" />
+
+        <com.jiangdg.usbcamera.ui.MultiToggleImageButton
+            android:id="@+id/camera_flash_button"
+            style="@style/NiceOption"
+            app:imageIds="@array/camera_flashmode_icons" />
+
+        <com.jiangdg.usbcamera.ui.MultiToggleImageButton
+            android:id="@+id/camera_switch_button"
+            style="@style/NiceOption"
+            app:imageIds="@array/camera_id_icons" />
+
+        <com.jiangdg.usbcamera.ui.MultiToggleImageButton
+            android:id="@+id/camera_focus_button"
+            style="@style/NiceOption"
+            app:imageIds="@array/camera_focus_icons" />
+
+        <com.jiangdg.usbcamera.ui.MultiToggleImageButton
+            android:id="@+id/camera_render_button"
+            style="@style/NiceOption"
+            app:imageIds="@array/camera_render_icons" />
+    </com.jiangdg.usbcamera.ui.TopRightWeightedLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#4d000000"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/btnRecord"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@mipmap/ic_record_start" />
+    </LinearLayout>
+</RelativeLayout>
