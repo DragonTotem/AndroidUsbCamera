@@ -1,0 +1,2 @@
+# AndroidUsbCamera
+通过外接USb设备实现一个手机实时对讲功能Demo
